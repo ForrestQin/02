@@ -10,5 +10,5 @@
 6、如果发现乱码，请把项目的编码改成utf-8
 
 7、请把Eclipse的Perspective（透视图）改成Java（而不是Java EE）
- 
-7、有问题可以找XBT（逃
+
+8、有问题欢迎去找XBT（逃
