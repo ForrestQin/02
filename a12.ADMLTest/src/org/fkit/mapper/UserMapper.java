@@ -14,7 +14,7 @@ import org.fkit.domain.User;
 
 public interface UserMapper {
 	
-	@Insert("INSERT INTO TB_USER(name,sex,age) VALUES(#{name},#{sex},#{age})")
+	@Insert("INSERT INTO TB_USER(name,sex,sid,sclass) VALUES(#{name},#{sex},#{sid},#{sclass})")
 	@Options(useGeneratedKeys=true,keyProperty="id")
 //	@SelectKey(before=false,keyProperty="id",resultType=Integer.class,
 //	statement="SELECT LAST_INSERT_ID() AS id")
@@ -23,7 +23,7 @@ public interface UserMapper {
 	@Delete("DELETE FROM TB_USER WHERE id = #{id}")
 	int removeUser(@Param("id") Integer id);
 	
-	@Update("UPDATE TB_USER SET name = #{name},sex = #{sex},age = #{age} WHERE id = #{id}")
+	@Update("UPDATE TB_USER SET name = #{name},sex = #{sex},sid = #{sid},sclass = #{sclass} WHERE id = #{id}")
 	void modifyUser(User user);
 	
 	@Select("SELECT * FROM TB_USER WHERE id = #{id}")
